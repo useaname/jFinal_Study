@@ -17,5 +17,10 @@ public class User extends Model<User> {
 		this.save();
 		return this.get("id");
 	}
+	
+	public int updateUser(){
+		this.update();
+		return this.get("id");
+	}
 }
 

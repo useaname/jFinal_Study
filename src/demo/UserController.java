@@ -25,4 +25,15 @@ public class UserController extends Controller {
 			renderJson("{\"status\":0}");
 		}
 	}
+	
+	
+	public void  changeInfo(){
+		User user = getModel(User.class);
+		int id = user.updateUser();
+		if(id>0){
+			renderJson("{\"status\":1, \"id\":"+id+"}");
+		}else{
+			renderJson("{\"status\":0}");
+		}
+	}
 }
